@@ -20,7 +20,16 @@ export const App: React.FC = () => {
             index
             element={isLoggedIn ? <Blog /> : <Navigate to={'/login'} replace />}
           />
-          <Route path="blog-details" element={<BlogDetails />} />
+          <Route
+            path="blog-details"
+            element={
+              <BlogDetails
+                id={0}
+                title={'Blog title'}
+                description={'Blog description'}
+              />
+            }
+          />
         </Route>
         <Route
           path="/login"

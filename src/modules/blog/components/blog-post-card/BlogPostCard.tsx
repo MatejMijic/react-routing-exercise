@@ -4,8 +4,10 @@ import { wrapper } from './BlogPostCard.styles';
 interface BlogPostCardProps {
   title: string;
   description: string;
-  onReadBlog: () => void;
+  onReadBlog?: () => void;
 }
+// Napraviti preko useState
+// useLocation
 
 export const BlogPostCard: React.FC<BlogPostCardProps> = ({
   title,

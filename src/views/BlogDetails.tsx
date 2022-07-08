@@ -1,7 +1,17 @@
-export const BlogDetails: React.FC = () => {
+import { BlogPostCard } from 'modules';
+// import { useLocation } from 'react-router-dom';
+
+type Props = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export const BlogDetails: React.FC<Props> = () => {
+  // const location = useLocation();
   return (
     <div>
-      <p>TODO</p>
+      <BlogPostCard title={'Blog title'} description={'Blog description'} />
     </div>
   );
 };
