@@ -1,5 +1,5 @@
 import { BlogPostCard } from 'modules';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 type Props = {
   id: number;
@@ -8,10 +8,15 @@ type Props = {
 };
 
 export const BlogDetails: React.FC<Props> = () => {
-  // const location = useLocation();
+  const location = useLocation();
+  console.log(location.state);
+
   return (
     <div>
-      <BlogPostCard title={'Blog title'} description={'Blog description'} />
+      <BlogPostCard
+        title={location.state.title}
+        description={location.state.description}
+      />
     </div>
   );
 };

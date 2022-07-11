@@ -6,8 +6,6 @@ interface BlogPostCardProps {
   description: string;
   onReadBlog?: () => void;
 }
-// Napraviti preko useState
-// useLocation
 
 export const BlogPostCard: React.FC<BlogPostCardProps> = ({
   title,

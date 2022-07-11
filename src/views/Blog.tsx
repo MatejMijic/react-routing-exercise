@@ -8,7 +8,7 @@ export const Blog: React.FC = () => {
   const navigate = useNavigate();
   function onReadBlog(blogPost: BlogPost) {
     console.log('TODO: go to details page', blogPost);
-    navigate('./blog-details', { replace: true });
+    navigate('./blog-details', { replace: true, state: blogPost });
   }
 
   return (
