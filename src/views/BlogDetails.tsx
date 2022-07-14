@@ -9,14 +9,11 @@ type Props = {
 
 export const BlogDetails: React.FC<Props> = () => {
   const location = useLocation();
-  console.log(location.state);
+  const state = location.state as Props;
 
   return (
     <div>
-      <BlogPostCard
-        title={location.state.title}
-        description={location.state.description}
-      />
+      <BlogPostCard title={state.title} description={state.description} />
     </div>
   );
 };
