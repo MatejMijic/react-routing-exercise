@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { Link } from 'react-router-dom';
 import { button, wrapper, link, linkWrapper } from './Header.styles';
 
 interface Props {
@@ -10,9 +11,16 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
     <header css={wrapper}>
       <p>Router Exercise</p>
       <div css={linkWrapper}>
-        <a css={link}>Home</a>
-        <a css={link}>Info</a>
-        <a css={link}>Blog</a>
+        <Link to={'/'}>
+          <a css={link}>Home</a>
+        </Link>
+        <Link to={'info'}>
+          <a css={link}>Info</a>
+        </Link>
+        <Link to={'blog'}>
+          <a css={link}>Blog</a>
+        </Link>
+
         <button onClick={onLogin} css={button}>
           Change status
         </button>
